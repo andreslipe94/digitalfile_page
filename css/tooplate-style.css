@@ -65,7 +65,7 @@ http://www.tooplate.com/view/2106-soft-landing
   }
 
   a:hover, a:active, a:focus {
-    color: #29ca8e;
+    color: #38B2AB;
     outline: none;
   }
 
@@ -251,7 +251,7 @@ http://www.tooplate.com/view/2106-soft-landing
 
   .custom-navbar .nav li a:hover {
     background: transparent;
-    color: #29ca8e;
+    color: #38B2AB;
   }
 
   .custom-navbar .navbar-nav > li > a:hover,
@@ -274,7 +274,7 @@ http://www.tooplate.com/view/2106-soft-landing
   }
 
   .custom-navbar .navbar-toggle .icon-bar {
-    background: #29ca8e;
+    background: #38B2AB;
     border-color: transparent;
   }
 
