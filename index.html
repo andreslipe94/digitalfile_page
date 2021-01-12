@@ -411,9 +411,7 @@ document.oncontextmenu = function(){return false;}
 
                          <div class="col-md-6 col-sm-6">
                               <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                                   <li><a href="https://www.instagram.com/digitalfile2020/" class="fa fa-instagram"></a></li>
                               </ul>
                          </div>
                     </div>
@@ -430,26 +428,9 @@ document.oncontextmenu = function(){return false;}
      <script src="js/owl.carousel.min.js"></script>
      <script src="js/smoothscroll.js"></script>
      <script src="js/custom.js"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
-     <!--<script type="text/javascript">
-          (function() {
-            emailjs.init("user_BvjFLzoMY2Pz81nCPhTca"); //please encrypted user id for malicious attacks
-          })();
-        //set the parameter as per you template parameter[https://dashboard.emailjs.com/templates]
-          var templateParams = {
-            to_name: '',
-            from_name: 'user_email',
-            message_html: 'message'
-          };
-        
-          emailjs.send('service_b90fk8n', 'template_54omwvl', templateParams)
-            .then(function(response) {
-              console.log('SUCCESS!', response.status, response.text);
-            }, function(error) {
-              console.log('FAILED...', error);
-            });
-        </script> -->
 
 
 <!-- SCRIPT SEND EMAIL -->
@@ -461,7 +442,7 @@ document.getElementById('contact-form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
-   btn.value = 'Enviando';
+   btn.value = 'Enviando...';
 
    const serviceID = 'service_b90fk8n';
    const templateID = 'template_54omwvl';
@@ -469,7 +450,13 @@ document.getElementById('contact-form')
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       btn.value = 'Send Email';
-      alert('Sent!');
+      swal({
+            title: "Muchas gracias por enviarnos un mensaje, pronto nos estaremos comunicando con usted",
+            icon: "success",
+            button: false,
+            timer: 3000
+          });
+
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
